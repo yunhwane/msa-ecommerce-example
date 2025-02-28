@@ -15,7 +15,13 @@ class QueryDslUserRepository (
     fun getUser(id: UserId): UserEntity? {
         return jpaQueryFactory.selectFrom(userEntity)
             .where(userEntity.userId.eq(id.userId))
-            .fetchOne();
+            .fetchOne()
+    }
+
+    fun getUserByEmail(email: String): UserEntity? {
+        return jpaQueryFactory.selectFrom(userEntity)
+            .where(userEntity.email.eq(email))
+            .fetchOne()
     }
 
     fun existsByEmail(email: String): Boolean {

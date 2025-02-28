@@ -7,4 +7,5 @@ import com.example.ecommerceuserservice.user.domain.UserId
 interface UserRepository {
     fun save(user: User): UserId
     fun getUser(id: UserId): User?
+    fun getUserByEmail(email: String): User?
 }

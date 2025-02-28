@@ -33,4 +33,16 @@ class UserRepositoryAdapter(
             )
         }
     }
+
+    override fun getUserByEmail(email: String): User? {
+        val userEntity = queryDslUserRepository.getUserByEmail(email)
+        return userEntity?.let {
+            User(
+                id = UserId(it.userId),
+                email = it.email,
+                password = it.password,
+                role = it.role
+            )
+        }
+    }
 }

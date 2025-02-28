@@ -8,6 +8,10 @@ spring:
           uri: http://localhost:9001
           predicates:
             - Path=/api/v1/users/**
+        - id: ecommerce-user-service-login
+          uri: http://localhost:9001
+          predicates:
+            - Path=/api/v1/login
 server:
   port: 8000
 

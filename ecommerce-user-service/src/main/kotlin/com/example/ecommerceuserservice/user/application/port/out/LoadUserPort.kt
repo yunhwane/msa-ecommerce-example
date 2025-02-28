@@ -5,4 +5,5 @@ import com.example.ecommerceuserservice.user.domain.UserId
 
 interface LoadUserPort {
     fun getUser(userId: UserId): User?
+    fun getUserByEmail(email: String): User?
 }

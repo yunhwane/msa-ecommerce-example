@@ -12,5 +12,10 @@ data class ApiResponse<T> (
         fun <T> with(httpStatus: HttpStatus, message: String, data: T?): ApiResponse<T> {
             return ApiResponse(status = httpStatus.value(), message = message, data = data)
         }
+
+        fun <T> error(httpStatus: HttpStatus, message: String): ApiResponse<T> {
+            return ApiResponse(status = httpStatus.value(), message = message, data = null)
+
+        }
     }
 }

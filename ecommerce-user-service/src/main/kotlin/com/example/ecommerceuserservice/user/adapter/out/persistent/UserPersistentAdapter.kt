@@ -12,11 +12,14 @@ import com.example.ecommerceuserservice.user.domain.UserId
 @PersistentAdapter
 class UserPersistentAdapter(
     private val userRepository: UserRepository,
-    private val userValidationRepository: UserValidationRepository
 ) : LoadUserPort, SaveUserPort{
 
     override fun getUser(userId: UserId): User? {
-        return userRepository.getUser(id = userId)
+        return userRepository.getUser(userId)
+    }
+
+    override fun getUserByEmail(email: String): User? {
+        return userRepository.getUserByEmail(email)
     }
 
     override fun save(user: User): UserId {
