@@ -1,4 +1,4 @@
-package com.example.ecommerceuserservice.config
+package com.example.ecommercecatalogservice.catalog.config
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
@@ -8,17 +8,17 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-internal class CoreDataSourceConfig {
+internal class CatalogDatasourceConfig {
 
     @Bean
-    @ConfigurationProperties(prefix = "storage.datasource.core")
-    fun coreHikariConfig(): HikariConfig {
+    @ConfigurationProperties(prefix = "storage.datasource.catalog")
+    fun catalogHikariConfig(): HikariConfig {
         return HikariConfig()
     }
 
     @Bean
     fun coreDataSource(
-        @Qualifier("coreHikariConfig") config: HikariConfig,
+        @Qualifier("catalogHikariConfig") config: HikariConfig,
     ): HikariDataSource {
         return HikariDataSource(config)
     }

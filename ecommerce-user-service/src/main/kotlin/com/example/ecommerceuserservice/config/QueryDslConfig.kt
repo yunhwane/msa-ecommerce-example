@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-internal class CoreQueryDslConfig {
+internal class QueryDslConfig {
 
     @PersistenceContext
     lateinit var entityManager: EntityManager

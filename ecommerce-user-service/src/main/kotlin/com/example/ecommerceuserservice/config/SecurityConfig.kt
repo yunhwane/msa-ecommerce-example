@@ -19,7 +19,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 
 @Configuration
-class CoreSecurityConfig (
+class SecurityConfig (
     private val tokenProvider: TokenProvider,
     private val userDetailsService: UserDetailsService,
 ){
