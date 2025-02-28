@@ -1,6 +1,10 @@
 spring:
   application:
     name: ecommerce-user-service
+  profiles:
+    active: local
+  config:
+    import: db-core.yml
 
 server:
   port: 9001

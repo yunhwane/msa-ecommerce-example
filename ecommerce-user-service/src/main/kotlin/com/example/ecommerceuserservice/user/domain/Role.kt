@@ -1,4 +1,4 @@
-package com.example.ecommerceuserservice.core.domain
+package com.example.ecommerceuserservice.user.domain
 
 enum class Role (val role: String) {
     ADMIN("ADMIN"),
