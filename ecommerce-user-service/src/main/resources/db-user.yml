@@ -23,7 +23,7 @@ spring:
 
 storage:
   datasource:
-    core:
+    user:
       driver-class-name: org.h2.Driver
       jdbc-url: jdbc:h2:mem:core;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
       username: sa
@@ -36,7 +36,7 @@ spring.config.activate.on-profile: staging
 
 storage:
   datasource:
-    core:
+    user:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url: jdbc:mysql://${storage.database.core-db.url}
       username: ${storage.database.core-db.username}
@@ -65,7 +65,7 @@ spring.config.activate.on-profile: live
 
 storage:
   datasource:
-    core:
+    user:
       driver-class-name: com.mysql.cj.jdbc.Driver
       jdbc-url: jdbc:mysql://${storage.database.core-db.url}
       username: ${storage.database.core-db.username}
