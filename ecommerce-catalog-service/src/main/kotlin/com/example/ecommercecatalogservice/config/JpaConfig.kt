@@ -1,4 +1,4 @@
-package com.example.ecommercecatalogservice.catalog.config
+package com.example.ecommercecatalogservice.config
 
 import org.springframework.boot.autoconfigure.domain.EntityScan
 import org.springframework.context.annotation.Configuration

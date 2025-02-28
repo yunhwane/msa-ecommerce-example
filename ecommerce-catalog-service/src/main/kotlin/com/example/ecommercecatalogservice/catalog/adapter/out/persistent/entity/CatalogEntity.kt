@@ -2,13 +2,14 @@ package com.example.ecommercecatalogservice.catalog.adapter.out.persistent.entit
 
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
+import java.util.*
 
 
 @Entity
 class CatalogEntity (
 
     @Column(name = "productId")
-    val productId: String,
+    val productId: String = UUID.randomUUID().toString(),
 
     @Column(name = "productName")
     val productName: String,
@@ -19,5 +20,5 @@ class CatalogEntity (
     @Column(name = "unitPrice")
     val unitPrice: Int,
 
-): BaseEntity() {
+    ): BaseEntity() {
 }

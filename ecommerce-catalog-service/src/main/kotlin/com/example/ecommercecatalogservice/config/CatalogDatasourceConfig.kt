@@ -1,4 +1,4 @@
-package com.example.ecommercecatalogservice.catalog.config
+package com.example.ecommercecatalogservice.config
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
